@@ -1,0 +1,142 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f52bb046-d202-4888-a276-46ae4d9a87ec</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>ImageData.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Unsupervised</Name>
+    <RootNamespace>HelloTensorflow</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|tfcs345</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ImageData.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="k-Means-Clusters.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data-Visualization.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data\cifar10\dataset.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data\cifar10\downloader.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data\cifar10\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data\dataset.py" />
+    <Compile Include="data\digits.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data\mnist.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data\mydataset.py" />
+    <Compile Include="data\quadrapeds\animals.py" />
+    <Compile Include="data\quadrapeds\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="k-Means-DIGITS-MNIST.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\data.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\evaluation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\filestore.py" />
+    <Compile Include="lib\images.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\log.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\CNN.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\DNN.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\DNNSoftmax.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\MLP.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\utils.py" />
+    <Compile Include="lib\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PCA-Compare-DIGITS-MNIST.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PCA-tSNE.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PCA_Components.py" />
+    <Compile Include="DBSCAN-DIGITS-MNIST.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rx\scatter.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rx\statistics.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rx\voronoi.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rx\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rx\visualization.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|tfcs345" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="data\cifar10\" />
+    <Folder Include="data\quadrapeds\" />
+    <Folder Include="models\" />
+    <Folder Include="lib\" />
+    <Folder Include="rx\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\quadrapeds\animals.c" />
+    <Content Include="data\quadrapeds\animals.names" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
